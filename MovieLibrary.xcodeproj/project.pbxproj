@@ -75,10 +75,10 @@
 		99A09FE12D492BD500A55BCB = {
 			isa = PBXGroup;
 			children = (
-				99A09FEC2D492BD500A55BCB /* MovieLibrary */,
 				99A0A0022D492BDA00A55BCB /* MovieLibraryTests */,
 				99A0A00C2D492BDA00A55BCB /* MovieLibraryUITests */,
 				99A09FEB2D492BD500A55BCB /* Products */,
+				99A09FEC2D492BD500A55BCB /* MovieLibrary */,
 			);
 			sourceTree = "<group>";
 		};
