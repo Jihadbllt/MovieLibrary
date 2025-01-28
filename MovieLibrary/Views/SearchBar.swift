@@ -1,18 +1,24 @@
-//
-//  SearchBar.swift
-//  MovieLibrary
-//
-//  Created by Jihad Ballout on 28/01/2025.
-//
-
 import SwiftUI
 
 struct SearchBar: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    @Binding var text: String
 
-#Preview {
-    SearchBar()
+    var body: some View {
+        HStack {
+            TextField("Search...", text: $text)
+                .padding(8)
+                .padding(.horizontal, 25)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .overlay(
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.gray)
+                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 8)
+                    }
+                )
+        }
+        .padding(.horizontal)
+    }
 }
