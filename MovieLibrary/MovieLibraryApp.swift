@@ -1,20 +1,13 @@
-//
-//  MovieLibraryApp.swift
-//  MovieLibrary
-//
-//  Created by Jihad Ballout on 28/01/2025.
-//
-
 import SwiftUI
 
 @main
 struct MovieLibraryApp: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject private var dataController = DataController()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MovieListView()
+                .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }
